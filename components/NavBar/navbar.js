@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "../../context/AuthContext";
 import { useRouter } from "next/router";
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

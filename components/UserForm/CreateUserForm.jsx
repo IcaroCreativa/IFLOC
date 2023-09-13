@@ -8,6 +8,7 @@ import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import { verifyMatriculeExist } from "../../utils/helper";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import des icônes
+import LoginBtn from "../../components/login-btn";
 
 export default function CreateUserForm() {
   const [email, setEmail] = useState("");
@@ -92,6 +93,9 @@ export default function CreateUserForm() {
           <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
             Créer un compte
           </h1>
+          <div>
+            <LoginBtn />
+          </div>
           <form className="space-y-4 md:space-y-6" onSubmit={handleSignUp}>
             <div className="lg:grid lg:grid-cols-2 lg:gap-4">
               <div>

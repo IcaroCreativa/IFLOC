@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useAuth } from "../../context/AuthContext";
+import LoginBtn from "../../components/login-btn";
 
 const containerStyle = {
   position: "relative",
@@ -60,6 +61,7 @@ export default function Home() {
           </svg>
           {user ? "Mon Compte" : "Se connecter"}
         </button>
+        <LoginBtn />
       </div>
     </div>
   );
